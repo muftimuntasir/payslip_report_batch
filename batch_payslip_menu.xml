@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <report
+            string="Print Batch Payslip"
+            id="action_report_packings_invoice_layout"
+            model="hr.payslip.run"
+            report_type="qweb-pdf"
+            name="payslip_report_batch.report_batch_payslip_layout"
+            file="payslip_report_batch.report_batch_payslip_layout"
+            menu="False"
+        />
+
+       </data>
+</openerp>
