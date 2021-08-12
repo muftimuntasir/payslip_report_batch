@@ -56,7 +56,7 @@ class batchpayslipdata(report_sxw.rml_parse):
         for slip_items in obj.slip_ids:
             tmp_dict={}
             head_count=head_count+1
-            tmp_dict['employee_id'] =12345
+            tmp_dict['employee_id'] =slip_items.contract_id.employee_id.id
             tmp_dict['employee_name'] =slip_items.contract_id.employee_id.name
             tmp_dict['joining_date'] =slip_items.contract_id.date_start
 

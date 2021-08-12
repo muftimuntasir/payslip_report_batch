@@ -9,11 +9,16 @@
 
                             <t t-set="sl_no" t-value="1"/>
                             <div style="page-break-before: always;">
+                                <h1>Lions Eye Institute &amp; Hospital</h1>
+                                <p>Lions Tower, Begum Rokeya Sarani Agargaon, Dhaka-1207</p>
+                                <p>Phone: 02-48121272 Email: blf@blfbd.org</p>
+                                <span t-esc="o.date_start"/>
+
                                     <table width="100%">
                                         <thead>
                                         <tr style="border: 1px solid black; border-collapse:collapse; width: 100%;">
                                             <th style="border: 1px solid black; border-collapse:collapse; text-align: right; font-family: calibri; font-size: 15;">Sl</th>
-                                            <th style="border: 1px solid black; border-collapse:collapse; text-align: right; font-family: calibri; font-size: 15;">Employee ID</th>
+                                            <th style="border: 1px solid black; border-collapse:collapse; text-align: right; font-family: calibri; font-size: 15;">Emp ID</th>
                                             <th style="border: 1px solid black; border-collapse:collapse; text-align: right; font-family: calibri; font-size: 15;">Employee Name</th>
                                             <th style="border: 1px solid black; border-collapse:collapse; text-align: right; font-family: calibri; font-size: 15;">Joining Date</th>
                                             <th style="border: 1px solid black; border-collapse:collapse; text-align: right; font-family: calibri; font-size: 15;">Department</th>
@@ -71,12 +76,12 @@
                                                     <td style="border: 1px solid black; border-collapse:collapse; text-align: left; font-family: calibri; font-size: 15;"><span t-esc="top_data_item['cpf_loan']"/></td>
                                                     <td style="border: 1px solid black; border-collapse:collapse; text-align: left; font-family: calibri; font-size: 15;"><span t-esc="top_data_item['income_tax']"/></td>
                                                     <td style="border: 1px solid black; border-collapse:collapse; text-align: left; font-family: calibri; font-size: 15;"><span t-esc="top_data_item['food']"/></td>
-                                                    <td style="border: 1px solid black; border-collapse:collapse; text-align: right; font-family: calibri; font-size: 15;"><span t-esc="top_data_item['adv_sal']"/></td>
-                                                    <td style="border: 1px solid black; border-collapse:collapse; text-align: right; font-family: calibri; font-size: 15;"><span t-esc="top_data_item['basic_deduct']"/></td>
-                                                    <td style="border: 1px solid black; border-collapse:collapse; text-align: right; font-family: calibri; font-size: 15;"><span t-esc="top_data_item['stamp']"/></td>
-                                                    <td style="border: 1px solid black; border-collapse:collapse; text-align: right; font-family: calibri; font-size: 15;"><span t-esc="top_data_item['total_deduct']"/></td>
-                                                    <td style="border: 1px solid black; border-collapse:collapse; text-align: right; font-family: calibri; font-size: 15;"><span t-esc="top_data_item['net_sal']"/></td>
-                                                    <td style="border: 1px solid black; border-collapse:collapse; text-align: right; font-family: calibri; font-size: 15;"><span t-esc="top_data_item['ac_no']"/></td>
+                                                    <td style="border: 1px solid black; border-collapse:collapse; text-align: left; font-family: calibri; font-size: 15;"><span t-esc="top_data_item['adv_sal']"/></td>
+                                                    <td style="border: 1px solid black; border-collapse:collapse; text-align: left; font-family: calibri; font-size: 15;"><span t-esc="top_data_item['basic_deduct']"/></td>
+                                                    <td style="border: 1px solid black; border-collapse:collapse; text-align: left; font-family: calibri; font-size: 15;"><span t-esc="top_data_item['stamp']"/></td>
+                                                    <td style="border: 1px solid black; border-collapse:collapse; text-align: left; font-family: calibri; font-size: 15;"><span t-esc="top_data_item['total_deduct']"/></td>
+                                                    <td style="border: 1px solid black; border-collapse:collapse; text-align: left; font-family: calibri; font-size: 15;"><span t-esc="top_data_item['net_sal']"/></td>
+                                                    <td style="border: 1px solid black; border-collapse:collapse; text-align: left; font-family: calibri; font-size: 15;"><span t-esc="top_data_item['ac_no']"/></td>
 
 
                                                     <t t-set="result" t-value="result + top_data_item['net_sal']"/>
@@ -117,15 +122,20 @@
                                         <td align="center"><strong>--------------</strong></td>
                                         <td> </td>
                                         <td align="center"> <strong>--------------</strong></td>
+                                         <td> </td>
+                                        <td align="center"> <strong>--------------</strong></td>
+
                                     </tr>
                                     <tr>
-                                        <td align="center"><strong>HR</strong></td>
+                                        <td align="center"><strong>Prepared By</strong></td>
                                         <td> </td>
-                                        <td align="center"><strong>Finance</strong></td>
+                                        <td align="center"><strong>DD(CC,F &amp; H)</strong></td>
                                         <td > </td>
-                                        <td align="center"><strong>CEO</strong></td>
+                                        <td align="center"><strong>AD(Admin)</strong></td>
                                         <td> </td>
-                                        <td align="center"><strong>MD</strong></td>
+                                        <td align="center"><strong>Treasurer</strong></td>
+                                         <td> </td>
+                                        <td align="center"><strong>Secretary General</strong></td>
                                     </tr>
                                 </table>
 
