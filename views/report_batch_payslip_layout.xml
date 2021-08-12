@@ -3,16 +3,17 @@
     <data>
         <template id="report_batch_payslip_layout">
             <t t-call="report.html_container">
-                <t t-call="report.external_layout">
                     <t t-foreach="docs" t-as="o">
                         <div class="page">
 
                             <t t-set="sl_no" t-value="1"/>
                             <div style="page-break-before: always;">
-                                <h1>Lions Eye Institute &amp; Hospital</h1>
-                                <p>Lions Tower, Begum Rokeya Sarani Agargaon, Dhaka-1207</p>
-                                <p>Phone: 02-48121272 Email: blf@blfbd.org</p>
-                                <span t-esc="o.date_start"/>
+                                <div style="align:center">
+                                <h1 style="text-align: center;">Lions Eye Institute &amp; Hospital</h1>
+                                <p style="text-align: center;">Lions Tower, Begum Rokeya Sarani Agargaon, Dhaka-1207</p>
+                                <p style="text-align: center;">Phone: 02-48121272 Email: blf@blfbd.org</p>
+                                <p style="text-align: center;">Salary Sheets for <span t-esc="o.date_start"/> to <span t-esc="o.date_end"/> </p>
+                                </div>
 
                                     <table width="100%">
                                         <thead>
@@ -145,7 +146,6 @@
 
                         </div>
                     </t>
-                </t>
             </t>
         </template>
     </data>
