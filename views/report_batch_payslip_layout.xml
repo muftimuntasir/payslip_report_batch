@@ -18,33 +18,33 @@
                                     <table width="100%">
                                         <thead>
                                         <tr style="border: 1px solid black; border-collapse:collapse; width: 100%;">
-                                            <th style="border: 1px solid black; border-collapse:collapse; text-align: right; font-family: calibri; font-size: 15;">Sl</th>
-                                            <th style="border: 1px solid black; border-collapse:collapse; text-align: right; font-family: calibri; font-size: 15;">Emp ID</th>
-                                            <th style="border: 1px solid black; border-collapse:collapse; text-align: right; font-family: calibri; font-size: 15; padding: 15px;">Employee Name</th>
-                                            <th style="border: 1px solid black; border-collapse:collapse; text-align: right; font-family: calibri; font-size: 15;">Joining Date</th>
-                                            <th style="border: 1px solid black; border-collapse:collapse; text-align: right; font-family: calibri; font-size: 15;">Department</th>
-                                            <th style="border: 1px solid black; border-collapse:collapse; text-align: right; font-family: calibri; font-size: 15;">Designation</th>
-                                            <th style="border: 1px solid black; border-collapse:collapse; text-align: right; font-family: calibri; font-size: 15;">Basic(1)</th>
-                                            <th style="border: 1px solid black; border-collapse:collapse; text-align: right; font-family: calibri; font-size: 15;">H-Rent(2)</th>
-                                            <th style="border: 1px solid black; border-collapse:collapse; text-align: right; font-family: calibri; font-size: 15;">Medical(3)</th>
-                                            <th style="border: 1px solid black; border-collapse:collapse; text-align: right; font-family: calibri; font-size: 15;">Arrear(4)</th>
-                                            <th style="border: 1px solid black; border-collapse:collapse; text-align: right; font-family: calibri; font-size: 15;">Interim Dear-ness Allow.(5)</th>
-                                            <th style="border: 1px solid black; border-collapse:collapse; text-align: right; font-family: calibri; font-size: 15;">Others(6)</th>
-                                            <th style="border: 1px solid black; border-collapse:collapse; text-align: right; font-family: calibri; font-size: 15;">Total Allowance 7=(2+3+4+5+6)</th>
-                                            <th style="border: 1px solid black; border-collapse:collapse; text-align: right; font-family: calibri; font-size: 15;">Gross Salary 8=(1+7)</th>
-                                            <th style="border: 1px solid black; border-collapse:collapse; text-align: right; font-family: calibri; font-size: 15;">P. Fund (9)</th>
-                                            <th style="border: 1px solid black; border-collapse:collapse; text-align: right; font-family: calibri; font-size: 15;">G.Ins (10)</th>
-                                            <th style="border: 1px solid black; border-collapse:collapse; text-align: right; font-family: calibri; font-size: 15;">CPF (11)</th>
-                                            <th style="border: 1px solid black; border-collapse:collapse; text-align: right; font-family: calibri; font-size: 15;">Group Ins. (12)</th>
-                                            <th style="border: 1px solid black; border-collapse:collapse; text-align: right; font-family: calibri; font-size: 15;">CPF Loan (13)</th>
-                                            <th style="border: 1px solid black; border-collapse:collapse; text-align: right; font-family: calibri; font-size: 15;">Income Tax (14)</th>
-                                            <th style="border: 1px solid black; border-collapse:collapse; text-align: right; font-family: calibri; font-size: 15;">Food (15)</th>
-                                            <th style="border: 1px solid black; border-collapse:collapse; text-align: right; font-family: calibri; font-size: 15;">Salary Advance (16)</th>
-                                            <th style="border: 1px solid black; border-collapse:collapse; text-align: right; font-family: calibri; font-size: 15;">Deduction from Basic (17)</th>
-                                            <th style="border: 1px solid black; border-collapse:collapse; text-align: right; font-family: calibri; font-size: 15;">Stamp (18)</th>
-                                            <th style="border: 1px solid black; border-collapse:collapse; text-align: right; font-family: calibri; font-size: 15;">Total Deduction 19= (11+12+12+14+15+16+17+18)</th>
-                                            <th style="border: 1px solid black; border-collapse:collapse; text-align: right; font-family: calibri; font-size: 15;">Net Salary Cr. to Account 19=(8+9+10-19)</th>
-                                            <th style="border: 1px solid black; border-collapse:collapse; text-align: right; font-family: calibri; font-size: 15;">A/C No</th>
+                                            <th style="border: 1px solid black; border-collapse:collapse; text-align: right; font-family: calibri; font-size: 17; padding: 5px;">Sl</th>
+                                            <th style="border: 1px solid black; border-collapse:collapse; text-align: right; font-family: calibri; font-size: 17; padding: 5px;">Emp ID</th>
+                                            <th style="border: 1px solid black; border-collapse:collapse; text-align: right; font-family: calibri; font-size: 17; padding: 5px;">Employee Name</th>
+                                            <th style="border: 1px solid black; border-collapse:collapse; text-align: right; font-family: calibri; font-size: 17; padding: 5px;">Joining Date</th>
+                                            <th style="border: 1px solid black; border-collapse:collapse; text-align: right; font-family: calibri; font-size: 17; padding: 5px;">Department</th>
+                                            <th style="border: 1px solid black; border-collapse:collapse; text-align: right; font-family: calibri; font-size: 17; padding: 5px;">Designation</th>
+                                            <th style="border: 1px solid black; border-collapse:collapse; text-align: right; font-family: calibri; font-size: 17; padding: 5px;">Basic(1)</th>
+                                            <th style="border: 1px solid black; border-collapse:collapse; text-align: right; font-family: calibri; font-size: 17; padding: 5px;">H-Rent(2)</th>
+                                            <th style="border: 1px solid black; border-collapse:collapse; text-align: right; font-family: calibri; font-size: 17; padding: 5px;">Medical(3)</th>
+                                            <th style="border: 1px solid black; border-collapse:collapse; text-align: right; font-family: calibri; font-size: 17; padding: 5px;">Arrear(4)</th>
+                                            <th style="border: 1px solid black; border-collapse:collapse; text-align: right; font-family: calibri; font-size: 17; padding: 5px;">Interim Dear-ness Allow.(5)</th>
+                                            <th style="border: 1px solid black; border-collapse:collapse; text-align: right; font-family: calibri; font-size: 17; padding: 5px;">Others(6)</th>
+                                            <th style="border: 1px solid black; border-collapse:collapse; text-align: right; font-family: calibri; font-size: 17; padding: 5px;">Total Allowance 7=(2+3+4+5+6)</th>
+                                            <th style="border: 1px solid black; border-collapse:collapse; text-align: right; font-family: calibri; font-size: 17; padding: 5px;">Gross Salary 8=(1+7)</th>
+                                            <th style="border: 1px solid black; border-collapse:collapse; text-align: right; font-family: calibri; font-size: 17; padding: 5px;">P. Fund (9)</th>
+                                            <th style="border: 1px solid black; border-collapse:collapse; text-align: right; font-family: calibri; font-size: 17; padding: 5px;">G.Ins (10)</th>
+                                            <th style="border: 1px solid black; border-collapse:collapse; text-align: right; font-family: calibri; font-size: 17; padding: 5px;">CPF (11)</th>
+                                            <th style="border: 1px solid black; border-collapse:collapse; text-align: right; font-family: calibri; font-size: 17; padding: 5px;">Group Ins. (12)</th>
+                                            <th style="border: 1px solid black; border-collapse:collapse; text-align: right; font-family: calibri; font-size: 17; padding: 5px;">CPF Loan (13)</th>
+                                            <th style="border: 1px solid black; border-collapse:collapse; text-align: right; font-family: calibri; font-size: 17; padding: 5px;">Income Tax (14)</th>
+                                            <th style="border: 1px solid black; border-collapse:collapse; text-align: right; font-family: calibri; font-size: 17; padding: 5px;">Food (15)</th>
+                                            <th style="border: 1px solid black; border-collapse:collapse; text-align: right; font-family: calibri; font-size: 17; padding: 5px;">Salary Advance (16)</th>
+                                            <th style="border: 1px solid black; border-collapse:collapse; text-align: right; font-family: calibri; font-size: 17; padding: 5px;">Deduction from Basic (17)</th>
+                                            <th style="border: 1px solid black; border-collapse:collapse; text-align: right; font-family: calibri; font-size: 17; padding: 5px;">Stamp (18)</th>
+                                            <th style="border: 1px solid black; border-collapse:collapse; text-align: right; font-family: calibri; font-size: 17; padding: 5px;">Total Deduction 19= (11+12+12+14+15+16+17+18)</th>
+                                            <th style="border: 1px solid black; border-collapse:collapse; text-align: right; font-family: calibri; font-size: 17; padding: 5px;">Net Salary Cr. to Account 19=(8+9+10-19)</th>
+                                            <th style="border: 1px solid black; border-collapse:collapse; text-align: right; font-family: calibri; font-size: 17;">A/C No</th>
 
                                         </tr>
                                     </thead>
