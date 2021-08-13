@@ -49,15 +49,33 @@
                                         </tr>
                                     </thead>
                                         <t t-set="result" t-value="0" />
-                                        <t t-set="fev_bonus" t-value="0" />
+                                        <t t-set="basic" t-value="0" />
+                                        <t t-set="house_rent" t-value="0" />
+                                        <t t-set="medical" t-value="0" />
+                                        <t t-set="arrear" t-value="0" />
+                                        <t t-set="dear_allow" t-value="0" />
+                                        <t t-set="other_allow" t-value="0" />
+                                        <t t-set="total_allow" t-value="0" />
+                                        <t t-set="gross" t-value="0" />
+                                        <t t-set="p_fund" t-value="0" />
+                                        <t t-set="g_ins" t-value="0" />
+                                        <t t-set="cpf" t-value="0" />
+                                        <t t-set="group_ins" t-value="0" />
+                                        <t t-set="cpf_loan" t-value="0" />
+                                        <t t-set="income_tax" t-value="0" />
+                                        <t t-set="food" t-value="0" />
+                                        <t t-set="adv_sal" t-value="0" />
+                                        <t t-set="basic_deduct" t-value="0" />
+                                        <t t-set="stamp" t-value="0" />
+                                        <t t-set="total_deduct" t-value="0" />
                                         <tbody>
                                             <t t-foreach="get_detail_data_list(o)" t-as="top_data_item">
                                                 <tr style="border: 1px solid black; border-collapse:collapse;">
 
 
-                                                    <td style="border: 1px solid black; border-collapse:collapse; text-align: right; font-family: calibri; font-size: 15; padding: 15px;"><span t-esc="sl_no"/></td>
+                                                    <td style="border: 1px solid black; border-collapse:collapse; text-align: left; font-family: calibri; font-size: 15; padding: 15px;"><span t-esc="sl_no"/></td>
                                                     <t t-set="sl_no" t-value="sl_no+1"/>
-                                                    <td style="border: 1px solid black; border-collapse:collapse; text-align: right; font-family: calibri; font-size: 15;"><span t-esc="top_data_item['employee_id']"/></td>
+                                                    <td style="border: 1px solid black; border-collapse:collapse; text-align: left; font-family: calibri; font-size: 15;"><span t-esc="top_data_item['employee_id']"/></td>
                                                     <td style="border: 1px solid black; border-collapse:collapse; text-align: left; font-family: calibri; font-size: 15; padding: 15px;"><span t-esc="top_data_item['employee_name']"/></td>
                                                     <td style="border: 1px solid black; border-collapse:collapse; text-align: left; font-family: calibri; font-size: 15; padding: 15px;"><span t-esc="top_data_item['joining_date']"/></td>
                                                     <td style="border: 1px solid black; border-collapse:collapse; text-align: left; font-family: calibri; font-size: 15; padding: 15px;"><span t-esc="top_data_item['department_name']"/></td>
@@ -86,6 +104,25 @@
 
 
                                                     <t t-set="result" t-value="result + top_data_item['net_sal']"/>
+                                                    <t t-set="basic" t-value="basic + top_data_item['basic']"/>
+                                                    <t t-set="house_rent" t-value="house_rent + top_data_item['house_rent']"/>
+                                                    <t t-set="medical" t-value="medical + top_data_item['medical']"/>
+                                                    <t t-set="arrear" t-value="arrear + top_data_item['arrear']"/>
+                                                    <t t-set="dear_allow" t-value="dear_allow + top_data_item['dear_allow']"/>
+                                                    <t t-set="other_allow" t-value="other_allow + top_data_item['other_allow']"/>
+                                                    <t t-set="total_allow" t-value="total_allow + top_data_item['total_allow']"/>
+                                                    <t t-set="gross" t-value="gross + top_data_item['gross']"/>
+                                                    <t t-set="p_fund" t-value="p_fund + top_data_item['p_fund']"/>
+                                                    <t t-set="g_ins" t-value="g_ins + top_data_item['g_ins']"/>
+                                                    <t t-set="cpf" t-value="cpf + top_data_item['cpf']"/>
+                                                    <t t-set="group_ins" t-value="group_ins + top_data_item['group_ins']"/>
+                                                    <t t-set="cpf_loan" t-value="cpf_loan + top_data_item['cpf_loan']"/>
+                                                    <t t-set="income_tax" t-value="income_tax + top_data_item['income_tax']"/>
+                                                    <t t-set="food" t-value="food + top_data_item['food']"/>
+                                                    <t t-set="adv_sal" t-value="adv_sal + top_data_item['adv_sal']"/>
+                                                    <t t-set="basic_deduct" t-value="basic_deduct + top_data_item['basic_deduct']"/>
+                                                    <t t-set="stamp" t-value="stamp + top_data_item['stamp']"/>
+                                                    <t t-set="total_deduct" t-value="total_deduct + top_data_item['total_deduct']"/>
 
                                                 </tr>
                                             </t>
@@ -96,13 +133,30 @@
 
                                                     <td align="center"><strong></strong></td>
                                                     <td> </td>
-                                                    <td align="center"><strong></strong></td>
+                                                    <td style="padding: 10px;"><strong></strong></td>
                                                     <td> </td>
-                                                    <td> </td>
-                                                    <td align="center"> <strong>Total</strong></td>
+                                                    <td style="padding: 10px;"><strong><t t-esc="'{:,.2f}'.format(basic)" /></strong> </td>
+                                                    <td style="padding: 10px;"><strong><t t-esc="'{:,.2f}'.format(house_rent)" /></strong> </td>
+                                                    <td style="padding: 10px;"><strong><t t-esc="'{:,.2f}'.format(medical)" /></strong> </td>
+                                                    <td style="padding: 10px;"><strong><t t-esc="'{:,.2f}'.format(arrear)" /></strong> </td>
+                                                    <td style="padding: 10px;"><strong><t t-esc="'{:,.2f}'.format(dear_allow)" /></strong> </td>
+                                                    <td style="padding: 10px;"><strong><t t-esc="'{:,.2f}'.format(other_allow)" /></strong> </td>
+                                                    <td style="padding: 10px;"><strong><t t-esc="'{:,.2f}'.format(total_allow)" /></strong> </td>
+                                                    <td style="padding: 10px;"><strong><t t-esc="'{:,.2f}'.format(gross)" /></strong> </td>
+                                                    <td style="padding: 10px;"><strong><t t-esc="'{:,.2f}'.format(p_fund)" /></strong> </td>
+                                                    <td style="padding: 10px;"><strong><t t-esc="'{:,.2f}'.format(g_ins)" /></strong> </td>
+                                                    <td style="padding: 10px;"><strong><t t-esc="'{:,.2f}'.format(cpf)" /></strong> </td>
+                                                    <td style="padding: 10px;"><strong><t t-esc="'{:,.2f}'.format(group_ins)" /></strong> </td>
+                                                    <td style="padding: 10px;"><strong><t t-esc="'{:,.2f}'.format(cpf_loan)" /></strong> </td>
+                                                    <td style="padding: 10px;"><strong><t t-esc="'{:,.2f}'.format(income_tax)" /></strong> </td>
+                                                    <td style="padding: 10px;"><strong><t t-esc="'{:,.2f}'.format(food)" /></strong> </td>
+                                                    <td style="padding: 10px;"><strong><t t-esc="'{:,.2f}'.format(adv_sal)" /></strong> </td>
+                                                    <td style="padding: 10px;"><strong><t t-esc="'{:,.2f}'.format(basic_deduct)" /></strong> </td>
+                                                    <td style="padding: 10px;"><strong><t t-esc="'{:,.2f}'.format(stamp)" /></strong> </td>
+                                                    <td style="padding: 10px;"><strong><t t-esc="'{:,.2f}'.format(total_deduct)" /></strong> </td>
 
-                             <td align="center"> <strong><t t-esc="'{:,.2f}'.format(result)" /></strong></td>
-                             <td align="center"> <strong>.</strong></td>
+
+                             <td align="center" style="padding: 10px;"> <strong><t t-esc="'{:,.2f}'.format(result)" /></strong></td>
                                                 </tr>
 
                                         </tbody>
@@ -111,6 +165,8 @@
                                     </table>
 
 
+                                <br></br>
+                                <br></br>
                                 <br></br>
                                 <br></br>
                                 <table width="100%">
