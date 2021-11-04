@@ -10,7 +10,7 @@
                 <data>
                     <xpath expr="//button[@string='Set to Draft']" position="after">
                         <button name="print_batch_payslip_report" type='object' string='Print Batch payslip' />
-                        <button name="print_bank_forwarding_report" type='object' string='Print Bank Forwarding'/>
+<!--                        <button name="print_bank_forwarding_report" type='object' string='Print Bank Forwarding' />-->
                     </xpath>
                 </data>
 
@@ -51,7 +51,7 @@
                                     <tr>
                                         <td align="center"><strong>Prepared By</strong></td>
                                         <td> </td>
-                                        <td align="center"><strong>DD(F &amp; H)</strong></td>
+                                        <td align="center"><strong>DD(CC,F &amp; H)</strong></td>
                                         <td > </td>
                                         <td align="center"><strong>AD(Admin)</strong></td>
                                         <td> </td>
