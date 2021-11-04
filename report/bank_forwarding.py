@@ -3,9 +3,9 @@ from openerp.report import report_sxw
 from openerp.osv import osv
 
 
-class batchpayslipdata(report_sxw.rml_parse):
+class batchbankforwarding(report_sxw.rml_parse):
     def __init__(self, cr, uid, name, context):
-        super(batchpayslipdata, self).__init__(cr, uid, name, context)
+        super(batchbankforwarding, self).__init__(cr, uid, name, context)
         self.localcontext.update({
             'get_detail_data_list': self.get_detail_data_list,
         })
@@ -29,6 +29,7 @@ class batchpayslipdata(report_sxw.rml_parse):
             'total_deduction':0,
             'net_apyable':0,
             'ac_no':'',
+
         }
         tmp_dict['basic'] = 0
         tmp_dict['house_rent'] = 0
@@ -105,4 +106,4 @@ class report_batch_payslip_layout(osv.AbstractModel):
     _name = 'report.payslip_report_batch.report_batch_payslip_layout'
     _inherit = 'report.abstract_report'
     _template = 'payslip_report_batch.report_batch_payslip_layout'
-    _wrapped_report_class = batchpayslipdata
+    _wrapped_report_class = batchbankforwarding

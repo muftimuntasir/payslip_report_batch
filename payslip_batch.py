@@ -14,6 +14,11 @@ class PayslipBatchRun(osv.osv):
         context = dict(context or {}, active_ids=ids)
         return self.pool.get("report").get_action(cr, uid, ids, 'payslip_report_batch.report_batch_payslip_layout', context=context)
 
+    def print_bank_forwarding_report(self, cr, uid, ids, context=None):
+
+        context = dict(context or {}, active_ids=ids)
+        return self.pool.get("report").get_action(cr, uid, ids, 'payslip_report_batch.report_batch_bank_forwarding', context=context)
+
 
 
 

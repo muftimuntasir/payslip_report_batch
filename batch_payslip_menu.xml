@@ -12,5 +12,15 @@
             menu="False"
         />
 
+        <report
+            string="Print Bank Forwarding"
+            id="action_report_packings_invoice_layouts"
+            model="hr.payslip.run"
+            report_type="qweb-pdf"
+            name="payslip_report_batch.report_batch_bank_forwarding"
+            file="payslip_report_batch.report_batch_bank_forwarding"
+            menu="False"
+        />
+
        </data>
 </openerp>

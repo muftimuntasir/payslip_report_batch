@@ -10,11 +10,59 @@
                 <data>
                     <xpath expr="//button[@string='Set to Draft']" position="after">
                         <button name="print_batch_payslip_report" type='object' string='Print Batch payslip' />
+                        <button name="print_bank_forwarding_report" type='object' string='Print Bank Forwarding'/>
                     </xpath>
                 </data>
 
             </field>
         </record>
+
+        <template id="external_layout_header_inherit_cr"
+            inherit_id="report.external_layout_header">
+            <xpath expr="//div[@class='header']" position="replace">
+                <div class="header">
+                    <div style="align:center">
+                                <h1 style="text-align: center;">Lions Eye Institute &amp; Hospital</h1>
+                                <p style="text-align: center;">Lions Tower, Begum Rokeya Sarani Agargaon, Dhaka-1207</p>
+                                <p style="text-align: center;">Phone: 02-48121272 Email: blf@blfbd.org</p>
+                    </div>
+                </div>
+            </xpath>
+        </template>
+        <template id="external_layout_footer_inherit_cr"
+            inherit_id="report.external_layout_footer">
+            <xpath expr="//div[@class='footer']" position="replace">
+                <div class="footer">
+                    <!--  code -->
+                    <table width="100%">
+
+                                    <tr>
+                                        <td align="center"><strong>--------------</strong></td>
+                                        <td> </td>
+                                        <td align="center"><strong>--------------</strong></td>
+                                        <td> </td>
+                                        <td align="center"><strong>--------------</strong></td>
+                                        <td> </td>
+                                        <td align="center"> <strong>--------------</strong></td>
+                                         <td> </td>
+                                        <td align="center"> <strong>--------------</strong></td>
+
+                                    </tr>
+                                    <tr>
+                                        <td align="center"><strong>Prepared By</strong></td>
+                                        <td> </td>
+                                        <td align="center"><strong>DD(F &amp; H)</strong></td>
+                                        <td > </td>
+                                        <td align="center"><strong>AD(Admin)</strong></td>
+                                        <td> </td>
+                                        <td align="center"><strong>Treasurer</strong></td>
+                                         <td> </td>
+                                        <td align="center"><strong>Secretary General</strong></td>
+                                    </tr>
+                                </table>
+                </div>
+            </xpath>
+        </template>
 
     </data>
 </openerp>

@@ -17,11 +17,13 @@ Packing all invoices and delivery challans are printed from individual button ac
     ],
     'data': [
         'views/report_batch_payslip_layout.xml',
+        'views/report_batch_bank_forwarding.xml',
 
 
         'batch_payslip_menu.xml',
 
         'batch_inherit_view.xml',
+
 
     ],
 
