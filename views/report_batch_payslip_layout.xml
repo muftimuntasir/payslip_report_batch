@@ -45,7 +45,7 @@
                                             <th style="border: 1px solid black; border-collapse:collapse; text-align: right; font-family: calibri; font-size: 17; padding: 5px;">Stamp (18)</th>
                                             <th style="border: 1px solid black; border-collapse:collapse; text-align: right; font-family: calibri; font-size: 17; padding: 5px;">Total Deduction 19= (11+12+12+14+15+16+17+18)</th>
                                             <th style="border: 1px solid black; border-collapse:collapse; text-align: right; font-family: calibri; font-size: 17; padding: 5px;">Net Salary Cr. to Account 19=(8+9+10-19)</th>
-<!--                                            <th style="border: 1px solid black; border-collapse:collapse; text-align: right; font-family: calibri; font-size: 17;">A/C No</th>-->
+                                            <th style="border: 1px solid black; border-collapse:collapse; text-align: right; font-family: calibri; font-size: 17;">A/C No</th>
 
                                         </tr>
                                     </thead>
@@ -101,7 +101,7 @@
                                                     <td style="border: 1px solid black; border-collapse:collapse; text-align: left; font-family: calibri; font-size: 17; padding: 10px;"><span t-esc="top_data_item['stamp']"/></td>
                                                     <td style="border: 1px solid black; border-collapse:collapse; text-align: left; font-family: calibri; font-size: 17; padding: 10px;"><span t-esc="top_data_item['total_deduct']"/></td>
                                                     <td style="border: 1px solid black; border-collapse:collapse; text-align: left; font-family: calibri; font-size: 17; padding: 10px;"><span t-esc="top_data_item['net_sal']"/></td>
-<!--                                                    <td style="border: 1px solid black; border-collapse:collapse; text-align: left; font-family: calibri; font-size: 17; padding: 10px;"><span t-esc="top_data_item['ac_no']"/></td>-->
+                                                    <td style="border: 1px solid black; border-collapse:collapse; text-align: left; font-family: calibri; font-size: 17; padding: 10px;"><span t-esc="top_data_item['ac_no']"/></td>
                                                     <t t-set="result" t-value="result + top_data_item['net_sal']"/>
                                                     <t t-set="basic" t-value="basic + top_data_item['basic']"/>
                                                     <t t-set="house_rent" t-value="house_rent + top_data_item['house_rent']"/>
