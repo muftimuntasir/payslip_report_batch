@@ -10,9 +10,9 @@
                             <t t-set="sl_no" t-value="1"/>
                             <div style="page-break-before: always;">
                                 <div style="align:center">
-<!--                                <h1 style="text-align: center;">Lions Eye Institute &amp; Hospital</h1>-->
-<!--                                <p style="text-align: center;">Lions Tower, Begum Rokeya Sarani Agargaon, Dhaka-1207</p>-->
-<!--                                <p style="text-align: center;">Phone: 02-48121272 Email: blf@blfbd.org</p>-->
+                                <h1 style="text-align: center;">Lions Eye Institute &amp; Hospital</h1>
+                                <p style="text-align: center;">Lions Tower, Begum Rokeya Sarani Agargaon, Dhaka-1207</p>
+                                <p style="text-align: center;">Phone: 02-48121272 Email: blf@blfbd.org</p>
                                 <p style="text-align: center;">Salary Sheets for <span t-esc="o.date_start"/> to <span t-esc="o.date_end"/> </p>
                                 </div>
 
@@ -45,7 +45,7 @@
                                             <th style="border: 1px solid black; border-collapse:collapse; text-align: right; font-family: calibri; font-size: 17; padding: 5px;">Stamp (18)</th>
                                             <th style="border: 1px solid black; border-collapse:collapse; text-align: right; font-family: calibri; font-size: 17; padding: 5px;">Total Deduction 19= (11+12+12+14+15+16+17+18)</th>
                                             <th style="border: 1px solid black; border-collapse:collapse; text-align: right; font-family: calibri; font-size: 17; padding: 5px;">Net Salary Cr. to Account 19=(8+9+10-19)</th>
-                                            <th style="border: 1px solid black; border-collapse:collapse; text-align: right; font-family: calibri; font-size: 17;">A/C No</th>
+<!--                                            <th style="border: 1px solid black; border-collapse:collapse; text-align: right; font-family: calibri; font-size: 17;">A/C No</th>-->
 
                                         </tr>
                                     </thead>
@@ -168,32 +168,32 @@
                                 <br></br>
                                 <br></br>
                                 <br></br>
-<!--                                <table width="100%">-->
+                                <table width="100%">
 
-<!--                                    <tr>-->
-<!--                                        <td align="center"><strong>&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;</strong></td>-->
-<!--                                        <td> </td>-->
-<!--                                        <td align="center"><strong>&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;</strong></td>-->
-<!--                                        <td> </td>-->
-<!--                                        <td align="center"><strong>&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;</strong></td>-->
-<!--                                        <td> </td>-->
-<!--                                        <td align="center"> <strong>&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;</strong></td>-->
-<!--                                         <td> </td>-->
-<!--                                        <td align="center"> <strong>&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;</strong></td>-->
+                                    <tr>
+                                        <td align="center"><strong>--------------</strong></td>
+                                        <td> </td>
+                                        <td align="center"><strong>--------------</strong></td>
+                                        <td> </td>
+                                        <td align="center"><strong>--------------</strong></td>
+                                        <td> </td>
+                                        <td align="center"> <strong>--------------</strong></td>
+                                         <td> </td>
+                                        <td align="center"> <strong>--------------</strong></td>
 
-<!--                                    </tr>-->
-<!--                                    <tr>-->
-<!--                                        <td align="center"><strong>Prepared By</strong></td>-->
-<!--                                        <td> </td>-->
-<!--                                        <td align="center"><strong>DD(CC,F &amp; H)</strong></td>-->
-<!--                                        <td > </td>-->
-<!--                                        <td align="center"><strong>AD(Admin)</strong></td>-->
-<!--                                        <td> </td>-->
-<!--                                        <td align="center"><strong>Treasurer</strong></td>-->
-<!--                                         <td> </td>-->
-<!--                                        <td align="center"><strong>Secretary General</strong></td>-->
-<!--                                    </tr>-->
-<!--                                </table>-->
+                                    </tr>
+                                    <tr>
+                                        <td align="center"><strong>Prepared By</strong></td>
+                                        <td> </td>
+                                        <td align="center"><strong>DD(CC,F &amp; H)</strong></td>
+                                        <td > </td>
+                                        <td align="center"><strong>AD(Admin)</strong></td>
+                                        <td> </td>
+                                        <td align="center"><strong>Treasurer</strong></td>
+                                         <td> </td>
+                                        <td align="center"><strong>Secretary General</strong></td>
+                                    </tr>
+                                </table>
 
                                 </div>
 
