@@ -9,119 +9,43 @@
 
                             <t t-set="sl_no" t-value="1"/>
                             <div style="page-break-before: always;">
-                                <div style="align:center">
-<!--                                <h1 style="text-align: center;">Lions Eye Institute &amp; Hospital</h1>-->
-<!--                                <p style="text-align: center;">Lions Tower, Begum Rokeya Sarani Agargaon, Dhaka-1207</p>-->
-<!--                                <p style="text-align: center;">Phone: 02-48121272 Email: blf@blfbd.org</p>-->
-                                <p style="text-align: center;">Salary Sheets for <span t-esc="o.date_start"/> to <span t-esc="o.date_end"/> </p>
+                                                                <div style="align:center">
+                                    <t t-if="o.header_name is False">
+                                          <h1 style="text-align: center;">Lions Eye Institute &amp; Hospital</h1>
+                                    </t>
+                                    <t t-else="">
+                                         <h1 style="text-align: center;"><span t-esc="o.header_name"/></h1>
+                                    </t>
+                                <p style="text-align: center;">Lions Tower, Begum Rokeya Sarani Agargaon, Dhaka-1207</p>
+                                <p style="text-align: center;">Phone: 02-48121272 Email: blf@blfbd.org</p>
+                                <p style="text-align: center;">Bank Forwaring for the Month of  <span t-esc="time.strftime('%B %Y',time.strptime(o.date_start,'%Y-%m-%d'))"/> </p>
                                 </div>
 
-                                    <table width="100%">
+                                    <table width="100%" class="center">
                                         <thead>
                                         <tr style="border: 1px solid black; border-collapse:collapse; width: 100%;">
                                             <th style="border: 1px solid black; border-collapse:collapse; text-align: right; font-family: calibri; font-size: 17; padding: 5px;">Sl</th>
-                                            <th style="border: 1px solid black; border-collapse:collapse; text-align: right; font-family: calibri; font-size: 17; padding: 5px;">Emp ID</th>
-                                            <th style="border: 1px solid black; border-collapse:collapse; text-align: right; font-family: calibri; font-size: 17; padding: 5px;">Employee Name</th>
-                                            <th style="border: 1px solid black; border-collapse:collapse; text-align: right; font-family: calibri; font-size: 17; padding: 5px;">Joining Date</th>
-                                            <th style="border: 1px solid black; border-collapse:collapse; text-align: right; font-family: calibri; font-size: 17; padding: 5px;">Department</th>
+                                            <th style="border: 1px solid black; border-collapse:collapse; text-align: right; font-family: calibri; font-size: 17; padding: 5px; white-space:nowrap;!important">Emp ID</th>
+                                            <th style="border: 1px solid black; border-collapse:collapse; text-align: right; font-family: calibri; font-size: 17; padding: 5px; white-space:nowrap;!important">Employee Name</th>
                                             <th style="border: 1px solid black; border-collapse:collapse; text-align: right; font-family: calibri; font-size: 17; padding: 5px;">Designation</th>
-                                            <th style="border: 1px solid black; border-collapse:collapse; text-align: right; font-family: calibri; font-size: 17; padding: 5px;">Basic(1)</th>
-                                            <th style="border: 1px solid black; border-collapse:collapse; text-align: right; font-family: calibri; font-size: 17; padding: 5px;">H-Rent(2)</th>
-                                            <th style="border: 1px solid black; border-collapse:collapse; text-align: right; font-family: calibri; font-size: 17; padding: 5px;">Medical(3)</th>
-                                            <th style="border: 1px solid black; border-collapse:collapse; text-align: right; font-family: calibri; font-size: 17; padding: 5px;">Arrear(4)</th>
-                                            <th style="border: 1px solid black; border-collapse:collapse; text-align: right; font-family: calibri; font-size: 17; padding: 5px;">Interim Dear-ness Allow.(5)</th>
-                                            <th style="border: 1px solid black; border-collapse:collapse; text-align: right; font-family: calibri; font-size: 17; padding: 5px;">Others(6)</th>
-                                            <th style="border: 1px solid black; border-collapse:collapse; text-align: right; font-family: calibri; font-size: 17; padding: 5px;">Total Allowance 7=(2+3+4+5+6)</th>
-                                            <th style="border: 1px solid black; border-collapse:collapse; text-align: right; font-family: calibri; font-size: 17; padding: 5px;">Gross Salary 8=(1+7)</th>
-                                            <th style="border: 1px solid black; border-collapse:collapse; text-align: right; font-family: calibri; font-size: 17; padding: 5px;">P. Fund (9)</th>
-                                            <th style="border: 1px solid black; border-collapse:collapse; text-align: right; font-family: calibri; font-size: 17; padding: 5px;">G.Ins (10)</th>
-                                            <th style="border: 1px solid black; border-collapse:collapse; text-align: right; font-family: calibri; font-size: 17; padding: 5px;">CPF (11)</th>
-                                            <th style="border: 1px solid black; border-collapse:collapse; text-align: right; font-family: calibri; font-size: 17; padding: 5px;">Group Ins. (12)</th>
-                                            <th style="border: 1px solid black; border-collapse:collapse; text-align: right; font-family: calibri; font-size: 17; padding: 5px;">CPF Loan (13)</th>
-                                            <th style="border: 1px solid black; border-collapse:collapse; text-align: right; font-family: calibri; font-size: 17; padding: 5px;">Income Tax (14)</th>
-                                            <th style="border: 1px solid black; border-collapse:collapse; text-align: right; font-family: calibri; font-size: 17; padding: 5px;">Food (15)</th>
-                                            <th style="border: 1px solid black; border-collapse:collapse; text-align: right; font-family: calibri; font-size: 17; padding: 5px;">Salary Advance (16)</th>
-                                            <th style="border: 1px solid black; border-collapse:collapse; text-align: right; font-family: calibri; font-size: 17; padding: 5px;">Deduction from Basic (17)</th>
-                                            <th style="border: 1px solid black; border-collapse:collapse; text-align: right; font-family: calibri; font-size: 17; padding: 5px;">Stamp (18)</th>
-                                            <th style="border: 1px solid black; border-collapse:collapse; text-align: right; font-family: calibri; font-size: 17; padding: 5px;">Total Deduction 19= (11+12+12+14+15+16+17+18)</th>
-                                            <th style="border: 1px solid black; border-collapse:collapse; text-align: right; font-family: calibri; font-size: 17; padding: 5px;">Net Salary Cr. to Account 19=(8+9+10-19)</th>
-                                            <th style="border: 1px solid black; border-collapse:collapse; text-align: right; font-family: calibri; font-size: 17;">A/C No</th>
-
+                                            <th style="border: 1px solid black; border-collapse:collapse; text-align: right; font-family: calibri; font-size: 17; padding: 5px;">Account No.</th>
+                                            <th style="border: 1px solid black; border-collapse:collapse; text-align: right; font-family: calibri; font-size: 17; padding: 5px; white-space:nowrap;!important">Net Salary(Cr. to Account)</th>
                                         </tr>
                                     </thead>
                                         <t t-set="result" t-value="0" />
-                                        <t t-set="basic" t-value="0" />
-                                        <t t-set="house_rent" t-value="0" />
-                                        <t t-set="medical" t-value="0" />
-                                        <t t-set="arrear" t-value="0" />
-                                        <t t-set="dear_allow" t-value="0" />
-                                        <t t-set="other_allow" t-value="0" />
-                                        <t t-set="total_allow" t-value="0" />
-                                        <t t-set="gross" t-value="0" />
-                                        <t t-set="p_fund" t-value="0" />
-                                        <t t-set="g_ins" t-value="0" />
-                                        <t t-set="cpf" t-value="0" />
-                                        <t t-set="group_ins" t-value="0" />
-                                        <t t-set="cpf_loan" t-value="0" />
-                                        <t t-set="income_tax" t-value="0" />
-                                        <t t-set="food" t-value="0" />
-                                        <t t-set="adv_sal" t-value="0" />
-                                        <t t-set="basic_deduct" t-value="0" />
-                                        <t t-set="stamp" t-value="0" />
-                                        <t t-set="total_deduct" t-value="0" />
                                         <tbody>
                                             <t t-foreach="get_detail_data_list(o)" t-as="top_data_item">
                                                 <tr style="border: 1px solid black; border-collapse:collapse;">
 
 
-                                                    <td style="border: 1px solid black; border-collapse:collapse; text-align: left; font-family: calibri; font-size: 15; padding: 15px;"><span t-esc="sl_no"/></td>
+                                                    <td style="border: 1px solid black; border-collapse:collapse; text-align: center; font-family: calibri; font-size: 15; padding: 15px;"><span t-esc="sl_no"/></td>
                                                     <t t-set="sl_no" t-value="sl_no+1"/>
-                                                    <td style="border: 1px solid black; border-collapse:collapse; text-align: left; font-family: calibri; font-size: 17;"><span t-esc="top_data_item['employee_id']"/></td>
-                                                    <td style="border: 1px solid black; border-collapse:collapse; text-align: left; font-family: calibri; font-size: 17; padding: 10px;"><span t-esc="top_data_item['employee_name']"/></td>
-                                                    <td style="border: 1px solid black; border-collapse:collapse; text-align: left; font-family: calibri; font-size: 17; padding: 10px;"><span t-esc="top_data_item['joining_date']"/></td>
-                                                    <td style="border: 1px solid black; border-collapse:collapse; text-align: left; font-family: calibri; font-size: 17; padding: 10px;"><span t-esc="top_data_item['department_name']"/></td>
-                                                    <td style="border: 1px solid black; border-collapse:collapse; text-align: left; font-family: calibri; font-size: 17; padding: 10px;"><span t-esc="top_data_item['designation']"/></td>
-                                                    <td style="border: 1px solid black; border-collapse:collapse; text-align: left; font-family: calibri; font-size: 17; padding: 10px;"><span t-esc="top_data_item['basic']"/></td>
-                                                    <td style="border: 1px solid black; border-collapse:collapse; text-align: left; font-family: calibri; font-size: 17; padding: 10px;"><span t-esc="top_data_item['house_rent']"/></td>
-                                                    <td style="border: 1px solid black; border-collapse:collapse; text-align: left; font-family: calibri; font-size: 17; padding: 10px;"><span t-esc="top_data_item['medical']"/></td>
-                                                    <td style="border: 1px solid black; border-collapse:collapse; text-align: left; font-family: calibri; font-size: 17; padding: 10px;"><span t-esc="top_data_item['arrear']"/></td>
-                                                    <td style="border: 1px solid black; border-collapse:collapse; text-align: left; font-family: calibri; font-size: 17; padding: 10px;"><span t-esc="top_data_item['dear_allow']"/></td>
-                                                    <td style="border: 1px solid black; border-collapse:collapse; text-align: left; font-family: calibri; font-size: 17; padding: 10px;"><span t-esc="top_data_item['other_allow']"/></td>
-                                                    <td style="border: 1px solid black; border-collapse:collapse; text-align: left; font-family: calibri; font-size: 17; padding: 10px;"><span t-esc="top_data_item['total_allow']"/></td>
-                                                    <td style="border: 1px solid black; border-collapse:collapse; text-align: left; font-family: calibri; font-size: 17; padding: 10px;"><span t-esc="top_data_item['gross']"/></td>
-                                                    <td style="border: 1px solid black; border-collapse:collapse; text-align: left; font-family: calibri; font-size: 17; padding: 10px;"><span t-esc="top_data_item['p_fund']"/></td>
-                                                    <td style="border: 1px solid black; border-collapse:collapse; text-align: left; font-family: calibri; font-size: 17; padding: 10px;"><span t-esc="top_data_item['g_ins']"/></td>
-                                                    <td style="border: 1px solid black; border-collapse:collapse; text-align: left; font-family: calibri; font-size: 17; padding: 10px;"><span t-esc="top_data_item['cpf']"/></td>
-                                                    <td style="border: 1px solid black; border-collapse:collapse; text-align: left; font-family: calibri; font-size: 17; padding: 10px;"><span t-esc="top_data_item['group_ins']"/></td>
-                                                    <td style="border: 1px solid black; border-collapse:collapse; text-align: left; font-family: calibri; font-size: 17; padding: 10px;"><span t-esc="top_data_item['cpf_loan']"/></td>
-                                                    <td style="border: 1px solid black; border-collapse:collapse; text-align: left; font-family: calibri; font-size: 17; padding: 10px;"><span t-esc="top_data_item['income_tax']"/></td>
-                                                    <td style="border: 1px solid black; border-collapse:collapse; text-align: left; font-family: calibri; font-size: 17; padding: 10px;"><span t-esc="top_data_item['food']"/></td>
-                                                    <td style="border: 1px solid black; border-collapse:collapse; text-align: left; font-family: calibri; font-size: 17; padding: 10px;"><span t-esc="top_data_item['adv_sal']"/></td>
-                                                    <td style="border: 1px solid black; border-collapse:collapse; text-align: left; font-family: calibri; font-size: 17; padding: 10px;"><span t-esc="top_data_item['basic_deduct']"/></td>
-                                                    <td style="border: 1px solid black; border-collapse:collapse; text-align: left; font-family: calibri; font-size: 17; padding: 10px;"><span t-esc="top_data_item['stamp']"/></td>
-                                                    <td style="border: 1px solid black; border-collapse:collapse; text-align: left; font-family: calibri; font-size: 17; padding: 10px;"><span t-esc="top_data_item['total_deduct']"/></td>
-                                                    <td style="border: 1px solid black; border-collapse:collapse; text-align: left; font-family: calibri; font-size: 17; padding: 10px;"><span t-esc="top_data_item['net_sal']"/></td>
-                                                    <td style="border: 1px solid black; border-collapse:collapse; text-align: left; font-family: calibri; font-size: 17; padding: 10px;"><span t-esc="top_data_item['ac_no']"/></td>
+                                                    <td style="border: 1px solid black; border-collapse:collapse; text-align: center; font-family: calibri; font-size: 17;"><span t-esc="top_data_item['employee_id']"/></td>
+                                                    <td style="border: 1px solid black; border-collapse:collapse; text-align: left; font-family: calibri; font-size: 17; padding: 5px; white-space:nowrap;!important"><span t-esc="top_data_item['employee_name']"/></td>
+                                                    <td style="border: 1px solid black; border-collapse:collapse; text-align: left; font-family: calibri; font-size: 17; padding: 5px;"><span t-esc="top_data_item['designation']"/></td>
+                                                    <td style="border: 1px solid black; border-collapse:collapse; text-align: center; font-family: calibri; font-size: 17; padding: 5px;"><span t-esc="top_data_item['acc_no']"/></td>
+                                                    <td style="border: 1px solid black; border-collapse:collapse; text-align: center; font-family: calibri; font-size: 17; padding: 5px;"><span t-esc="top_data_item['net_sal']"/></td>
                                                     <t t-set="result" t-value="result + top_data_item['net_sal']"/>
-                                                    <t t-set="basic" t-value="basic + top_data_item['basic']"/>
-                                                    <t t-set="house_rent" t-value="house_rent + top_data_item['house_rent']"/>
-                                                    <t t-set="medical" t-value="medical + top_data_item['medical']"/>
-                                                    <t t-set="arrear" t-value="arrear + top_data_item['arrear']"/>
-                                                    <t t-set="dear_allow" t-value="dear_allow + top_data_item['dear_allow']"/>
-                                                    <t t-set="other_allow" t-value="other_allow + top_data_item['other_allow']"/>
-                                                    <t t-set="total_allow" t-value="total_allow + top_data_item['total_allow']"/>
-                                                    <t t-set="gross" t-value="gross + top_data_item['gross']"/>
-                                                    <t t-set="p_fund" t-value="p_fund + top_data_item['p_fund']"/>
-                                                    <t t-set="g_ins" t-value="g_ins + top_data_item['g_ins']"/>
-                                                    <t t-set="cpf" t-value="cpf + top_data_item['cpf']"/>
-                                                    <t t-set="group_ins" t-value="group_ins + top_data_item['group_ins']"/>
-                                                    <t t-set="cpf_loan" t-value="cpf_loan + top_data_item['cpf_loan']"/>
-                                                    <t t-set="income_tax" t-value="income_tax + top_data_item['income_tax']"/>
-                                                    <t t-set="food" t-value="food + top_data_item['food']"/>
-                                                    <t t-set="adv_sal" t-value="adv_sal + top_data_item['adv_sal']"/>
-                                                    <t t-set="basic_deduct" t-value="basic_deduct + top_data_item['basic_deduct']"/>
-                                                    <t t-set="stamp" t-value="stamp + top_data_item['stamp']"/>
-                                                    <t t-set="total_deduct" t-value="total_deduct + top_data_item['total_deduct']"/>
 
                                                 </tr>
                                             </t>
@@ -132,29 +56,7 @@
 
                                                     <td align="center"><strong></strong></td>
                                                     <td> </td>
-                                                    <td style="padding: 10px;"><strong></strong></td>
                                                     <td> </td>
-                                                    <td style="padding: 10px;"><strong><t t-esc="'{:,.2f}'.format(basic)" /></strong> </td>
-                                                    <td style="padding: 10px;"><strong><t t-esc="'{:,.2f}'.format(house_rent)" /></strong> </td>
-                                                    <td style="padding: 10px;"><strong><t t-esc="'{:,.2f}'.format(medical)" /></strong> </td>
-                                                    <td style="padding: 10px;"><strong><t t-esc="'{:,.2f}'.format(arrear)" /></strong> </td>
-                                                    <td style="padding: 10px;"><strong><t t-esc="'{:,.2f}'.format(dear_allow)" /></strong> </td>
-                                                    <td style="padding: 10px;"><strong><t t-esc="'{:,.2f}'.format(other_allow)" /></strong> </td>
-                                                    <td style="padding: 10px;"><strong><t t-esc="'{:,.2f}'.format(total_allow)" /></strong> </td>
-                                                    <td style="padding: 10px;"><strong><t t-esc="'{:,.2f}'.format(gross)" /></strong> </td>
-                                                    <td style="padding: 10px;"><strong><t t-esc="'{:,.2f}'.format(p_fund)" /></strong> </td>
-                                                    <td style="padding: 10px;"><strong><t t-esc="'{:,.2f}'.format(g_ins)" /></strong> </td>
-                                                    <td style="padding: 10px;"><strong><t t-esc="'{:,.2f}'.format(cpf)" /></strong> </td>
-                                                    <td style="padding: 10px;"><strong><t t-esc="'{:,.2f}'.format(group_ins)" /></strong> </td>
-                                                    <td style="padding: 10px;"><strong><t t-esc="'{:,.2f}'.format(cpf_loan)" /></strong> </td>
-                                                    <td style="padding: 10px;"><strong><t t-esc="'{:,.2f}'.format(income_tax)" /></strong> </td>
-                                                    <td style="padding: 10px;"><strong><t t-esc="'{:,.2f}'.format(food)" /></strong> </td>
-                                                    <td style="padding: 10px;"><strong><t t-esc="'{:,.2f}'.format(adv_sal)" /></strong> </td>
-                                                    <td style="padding: 10px;"><strong><t t-esc="'{:,.2f}'.format(basic_deduct)" /></strong> </td>
-                                                    <td style="padding: 10px;"><strong><t t-esc="'{:,.2f}'.format(stamp)" /></strong> </td>
-                                                    <td style="padding: 10px;"><strong><t t-esc="'{:,.2f}'.format(total_deduct)" /></strong> </td>
-
-
                              <td align="center" style="padding: 10px;"> <strong><t t-esc="'{:,.2f}'.format(result)" /></strong></td>
                                                 </tr>
 
@@ -168,32 +70,14 @@
                                 <br></br>
                                 <br></br>
                                 <br></br>
-<!--                                <table width="100%">-->
+                                <table width="100%">
 
-<!--                                    <tr>-->
-<!--                                        <td align="center"><strong>&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;</strong></td>-->
-<!--                                        <td> </td>-->
-<!--                                        <td align="center"><strong>&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;</strong></td>-->
-<!--                                        <td> </td>-->
-<!--                                        <td align="center"><strong>&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;</strong></td>-->
-<!--                                        <td> </td>-->
-<!--                                        <td align="center"> <strong>&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;</strong></td>-->
-<!--                                         <td> </td>-->
-<!--                                        <td align="center"> <strong>&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;</strong></td>-->
-
-<!--                                    </tr>-->
-<!--                                    <tr>-->
-<!--                                        <td align="center"><strong>Prepared By</strong></td>-->
-<!--                                        <td> </td>-->
-<!--                                        <td align="center"><strong>DD(CC,F &amp; H)</strong></td>-->
-<!--                                        <td > </td>-->
-<!--                                        <td align="center"><strong>AD(Admin)</strong></td>-->
-<!--                                        <td> </td>-->
-<!--                                        <td align="center"><strong>Treasurer</strong></td>-->
-<!--                                         <td> </td>-->
-<!--                                        <td align="center"><strong>Secretary General</strong></td>-->
-<!--                                    </tr>-->
-<!--                                </table>-->
+                                    <tr>
+                                        <td align="center"><strong>Treasurer</strong></td>
+                                         <td> </td>
+                                        <td align="center"><strong>Secretary General</strong></td>
+                                    </tr>
+                                </table>
 
                                 </div>
 

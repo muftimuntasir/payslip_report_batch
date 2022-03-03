@@ -8,14 +8,22 @@
             <field name="inherit_id" ref="hr_payroll.hr_payslip_run_form"/>
             <field name="arch" type="xml">
                 <data>
+                    <xpath expr="//field[@name='credit_note']" position="after">
+                    <newline/>
+                    <field name="header_name"/>
+                </xpath>
                     <xpath expr="//button[@string='Set to Draft']" position="after">
                         <button name="print_batch_payslip_report" type='object' string='Print Batch payslip' />
-<!--                        <button name="print_bank_forwarding_report" type='object' string='Print Bank Forwarding' />-->
+                        <button name="print_bank_forwarding_report" type='object' string='Print Bank Forwarding' />
+<!--                        <button name="approve_payslive" type='object' string='Approve' class="oe_highlight" />-->
+<!--                        <button name="disburse_payslip" type='object' string='Disburse' class="oe_highlight" />-->
                     </xpath>
                 </data>
 
             </field>
         </record>
+
+
 
 <!--        <template id="external_layout_header_inherit_cr"-->
 <!--            inherit_id="report.external_layout_header">-->

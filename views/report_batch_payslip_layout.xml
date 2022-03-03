@@ -10,11 +10,17 @@
                             <t t-set="sl_no" t-value="1"/>
                             <div style="page-break-before: always;">
                                 <div style="align:center">
-                                <h1 style="text-align: center;">Lions Eye Institute &amp; Hospital</h1>
+                                    <t t-if="o.header_name is False">
+                                          <h1 style="text-align: center;">Lions Eye Institute &amp; Hospital</h1>
+                                    </t>
+                                    <t t-else="">
+                                         <h1 style="text-align: center;"><span t-esc="o.header_name"/></h1>
+                                    </t>
                                 <p style="text-align: center;">Lions Tower, Begum Rokeya Sarani Agargaon, Dhaka-1207</p>
                                 <p style="text-align: center;">Phone: 02-48121272 Email: blf@blfbd.org</p>
-                                <p style="text-align: center;">Salary Sheets for <span t-esc="o.date_start"/> to <span t-esc="o.date_end"/> </p>
+                                <p style="text-align: center;">Salary Sheets for the Month of  <span t-esc="time.strftime('%B %Y',time.strptime(o.date_start,'%Y-%m-%d'))"/> </p>
                                 </div>
+
 
                                     <table width="100%">
                                         <thead>
@@ -43,9 +49,8 @@
                                             <th style="border: 1px solid black; border-collapse:collapse; text-align: right; font-family: calibri; font-size: 17; padding: 5px;">Salary Advance (16)</th>
                                             <th style="border: 1px solid black; border-collapse:collapse; text-align: right; font-family: calibri; font-size: 17; padding: 5px;">Deduction from Basic (17)</th>
                                             <th style="border: 1px solid black; border-collapse:collapse; text-align: right; font-family: calibri; font-size: 17; padding: 5px;">Stamp (18)</th>
-                                            <th style="border: 1px solid black; border-collapse:collapse; text-align: right; font-family: calibri; font-size: 17; padding: 5px;">Total Deduction 19= (11+12+12+14+15+16+17+18)</th>
+                                            <th style="border: 1px solid black; border-collapse:collapse; text-align: left; font-family: calibri; font-size: 14; padding: 3px; white-space:wrap;!important">Total Deduction 19=(11+12+12+14+15 +16+17+18)</th>
                                             <th style="border: 1px solid black; border-collapse:collapse; text-align: right; font-family: calibri; font-size: 17; padding: 5px;">Net Salary Cr. to Account 19=(8+9+10-19)</th>
-                                            <th style="border: 1px solid black; border-collapse:collapse; text-align: right; font-family: calibri; font-size: 17;">A/C No</th>
 
                                         </tr>
                                     </thead>
@@ -101,7 +106,6 @@
                                                     <td style="border: 1px solid black; border-collapse:collapse; text-align: left; font-family: calibri; font-size: 17; padding: 10px;"><span t-esc="top_data_item['stamp']"/></td>
                                                     <td style="border: 1px solid black; border-collapse:collapse; text-align: left; font-family: calibri; font-size: 17; padding: 10px;"><span t-esc="top_data_item['total_deduct']"/></td>
                                                     <td style="border: 1px solid black; border-collapse:collapse; text-align: left; font-family: calibri; font-size: 17; padding: 10px;"><span t-esc="top_data_item['net_sal']"/></td>
-                                                    <td style="border: 1px solid black; border-collapse:collapse; text-align: left; font-family: calibri; font-size: 17; padding: 10px;"><span t-esc="top_data_item['ac_no']"/></td>
                                                     <t t-set="result" t-value="result + top_data_item['net_sal']"/>
                                                     <t t-set="basic" t-value="basic + top_data_item['basic']"/>
                                                     <t t-set="house_rent" t-value="house_rent + top_data_item['house_rent']"/>

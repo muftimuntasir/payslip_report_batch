@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <!--proforma_invoice form-->
+        <record model="ir.ui.view" id="disburse_batch_form_view" >
+			<field name="name">Disburse Batch Information</field>
+			<field name="model">disburse.batch</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="PI">
+                    <sheet>
+
+                        <group string="Batch Information">
+                            <group>
+                                <field name="name"/>
+                                <field name="bank_cash_id"/>
+                                <field name="batch_id"/>
+                            </group>
+
+                        </group>
+                                                     <footer>
+                        <button name="button_confirm" string="Confirm" class="oe_highlight" type="object"/> or
+                        <button string="Cancel" class="oe_link" special="cancel"/>
+                    </footer>
+
+                        <!--Tab information-->
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+
+
+        <!--proforma_invoice starting action-->
+        <record model="ir.actions.act_window" id="disburse_payment_action">
+			<field name="name">Disburse payment</field>
+			<field name="res_model">disburse.batch</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p class="oe_view_nocontent_create">Click to create a batch
+				</p>
+			</field>
+		</record>
+
+
+
+        <!--Proforma Invoice record list tree-->
+        <record model="ir.ui.view" id="disburse_payment_tree_view" >
+            <field name="name">disburse.batch</field>
+            <field name="model">disburse.batch</field>
+            <field name="arch" type="xml">
+                <tree string="Bill List" default_order='id desc'>
+
+                                <field name="name"/>
+                                <field name="bank_cash_id"/>
+
+
+                </tree>
+            </field>
+        </record>
+
+<!--        <menuitem id="bill_payment_menu" name="Bill Payment" parent="leih_admission_menu" action="bill_register_payment_new_action" groups="leih.group_admission_menu_bill_payment"/>-->
+
+    </data>
+</openerp>
