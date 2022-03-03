@@ -3,7 +3,7 @@
     <data>
         <template id="report_batch_bank_forwarding">
             <t t-call="report.html_container">
-                <t t-call="report.external_layout">
+<!--                <t t-call="report.external_layout">-->
                     <t t-foreach="docs" t-as="o">
                         <div class="page">
 
@@ -84,7 +84,6 @@
 
 
                         </div>
-                    </t>
                     </t>
             </t>
         </template>
