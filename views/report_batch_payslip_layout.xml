@@ -14,6 +14,18 @@
             <xpath expr="//div[@class='footer']" position="replace">
                 <div class="footer">
                                          <table width="100%">
+                                             <tr>
+                                        <td align="center"><strong></strong></td>
+                                        <td> </td>
+                                        <td align="center"><strong></strong></td>
+                                        <td> </td>
+                                        <td align="center"><strong></strong></td>
+                                        <td> </td>
+                                        <td align="center"> <strong></strong></td>
+                                         <td> </td>
+                                        <td align="center"> <strong></strong></td>
+
+                                    </tr>
 
                                     <tr>
                                         <td align="center"><strong>--------------</strong></td>
