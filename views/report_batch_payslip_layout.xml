@@ -14,8 +14,10 @@
             <xpath expr="//div[@class='footer']" position="replace">
                 <div class="footer">
                                          <table width="100%">
-                                             <tr>
-                                        <td align="center"><strong></strong></td>
+                                             <tr style="padding-bottom: 1em;">
+                                        <td align="center"><strong><![CDATA[&nbsp;]]></strong></td>
+                                        <td> </td>
+                                        <td> </td>
                                         <td> </td>
                                         <td align="center"><strong></strong></td>
                                         <td> </td>
