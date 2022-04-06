@@ -79,9 +79,9 @@
                                     <t t-else="">
                                          <h1 style="text-align: center;"><span t-esc="o.header_name"/></h1>
                                     </t>
-                                <p style="text-align: center;">Lions Tower, Begum Rokeya Sarani Agargaon, Dhaka-1207</p>
-                                <p style="text-align: center;">Phone: 02-48121272 Email: blf@blfbd.org</p>
-                                <p style="text-align: center;">Salary Sheets for the Month of  <span t-esc="time.strftime('%B %Y',time.strptime(o.date_start,'%Y-%m-%d'))"/> </p>
+                                <p style="text-align: center; font-size: 19px !important;">Lions Tower, Begum Rokeya Sarani Agargaon, Dhaka-1207</p>
+                                <p style="text-align: center; font-size: 19px !important;">Phone: 02-48121272 Email: blf@blfbd.org</p>
+                                <p style="text-align: center; font-size: 19px !important;">Salary Sheets for the Month of  <span t-esc="time.strftime('%B %Y',time.strptime(o.date_start,'%Y-%m-%d'))"/> </p>
                                 </div>
 
 
