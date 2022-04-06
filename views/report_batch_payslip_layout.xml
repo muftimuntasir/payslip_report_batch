@@ -1,9 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
 <openerp>
-    <data>
+     <data>
+          <template id="external_layout_header_inherit" inherit_id="report.external_layout_header" priority="17">
+            <xpath expr="//div[@class='header']" position="replace">
+                <div class="header">
+
+                </div>
+
+            </xpath>
+        </template>
+
+                        <template id="external_layout_footer_inherit" inherit_id="report.external_layout_footer" priority="17">
+            <xpath expr="//div[@class='footer']" position="replace">
+                <div class="footer">
+                                         <table width="100%">
+
+                                    <tr>
+                                        <td align="center"><strong>--------------</strong></td>
+                                        <td> </td>
+                                        <td align="center"><strong>--------------</strong></td>
+                                        <td> </td>
+                                        <td align="center"><strong>--------------</strong></td>
+                                        <td> </td>
+                                        <td align="center"> <strong>--------------</strong></td>
+                                         <td> </td>
+                                        <td align="center"> <strong>--------------</strong></td>
+
+                                    </tr>
+                                    <tr>
+                                        <td align="center"><strong>Prepared By</strong></td>
+                                        <td> </td>
+                                        <td align="center"><strong>DD(F &amp; H)</strong></td>
+                                        <td > </td>
+                                        <td align="center"><strong>AD(Admin)</strong></td>
+                                        <td> </td>
+                                        <td align="center"><strong>Treasurer</strong></td>
+                                         <td> </td>
+                                        <td align="center"><strong>Secretary General</strong></td>
+                                    </tr>
+                                </table>
+                    <ul class="list-inline">
+                <li>Page:</li>
+                <li><span class="page"/></li>
+                <li>/</li>
+                <li><span class="topage"/></li>
+            </ul>
+                </div>
+
+            </xpath>
+        </template>
+
         <template id="report_batch_payslip_layout">
             <t t-call="report.html_container">
-<!--                <t t-call="report.external_layout">-->
+                <t t-call="report.external_layout">
                     <t t-foreach="docs" t-as="o">
                         <div class="page">
 
@@ -170,34 +219,35 @@
 
                                 <br></br>
                                 <br></br>
-                                <br></br>
 <!--                                <br></br>-->
-                                <table width="100%">
+<!--                                <br></br>-->
+<!--&lt;!&ndash;                                <br></br>&ndash;&gt;-->
+<!--                                <table width="100%">-->
 
-                                    <tr>
-                                        <td align="center"><strong>--------------</strong></td>
-                                        <td> </td>
-                                        <td align="center"><strong>--------------</strong></td>
-                                        <td> </td>
-                                        <td align="center"><strong>--------------</strong></td>
-                                        <td> </td>
-                                        <td align="center"> <strong>--------------</strong></td>
-                                         <td> </td>
-                                        <td align="center"> <strong>--------------</strong></td>
+<!--                                    <tr>-->
+<!--                                        <td align="center"><strong>&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;</strong></td>-->
+<!--                                        <td> </td>-->
+<!--                                        <td align="center"><strong>&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;</strong></td>-->
+<!--                                        <td> </td>-->
+<!--                                        <td align="center"><strong>&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;</strong></td>-->
+<!--                                        <td> </td>-->
+<!--                                        <td align="center"> <strong>&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;</strong></td>-->
+<!--                                         <td> </td>-->
+<!--                                        <td align="center"> <strong>&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;</strong></td>-->
 
-                                    </tr>
-                                    <tr>
-                                        <td align="center"><strong>Prepared By</strong></td>
-                                        <td> </td>
-                                        <td align="center"><strong>DD(F &amp; H)</strong></td>
-                                        <td > </td>
-                                        <td align="center"><strong>AD(Admin)</strong></td>
-                                        <td> </td>
-                                        <td align="center"><strong>Treasurer</strong></td>
-                                         <td> </td>
-                                        <td align="center"><strong>Secretary General</strong></td>
-                                    </tr>
-                                </table>
+<!--                                    </tr>-->
+<!--                                    <tr>-->
+<!--                                        <td align="center"><strong>Prepared By</strong></td>-->
+<!--                                        <td> </td>-->
+<!--                                        <td align="center"><strong>DD(F &amp; H)</strong></td>-->
+<!--                                        <td > </td>-->
+<!--                                        <td align="center"><strong>AD(Admin)</strong></td>-->
+<!--                                        <td> </td>-->
+<!--                                        <td align="center"><strong>Treasurer</strong></td>-->
+<!--                                         <td> </td>-->
+<!--                                        <td align="center"><strong>Secretary General</strong></td>-->
+<!--                                    </tr>-->
+<!--                                </table>-->
 
                                 </div>
 
@@ -205,6 +255,7 @@
 
                         </div>
                     </t>
+                </t>
                     </t>
 
         </template>
