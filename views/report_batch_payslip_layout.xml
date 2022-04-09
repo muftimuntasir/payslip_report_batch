@@ -1,17 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <openerp>
      <data>
-          <template id="external_layout_header_inherit" inherit_id="report.external_layout_header" priority="17">
+
+                        <template id="internal_layout_footer_inherit" inherit_id="report.internal_layout" priority="17">
             <xpath expr="//div[@class='header']" position="replace">
                 <div class="header">
-
                 </div>
 
-            </xpath>
-        </template>
-
-                        <template id="external_layout_footer_inherit" inherit_id="report.external_layout_footer" priority="17">
-            <xpath expr="//div[@class='footer']" position="replace">
                 <div class="footer">
                                          <table width="100%">
                                              <tr style="padding-bottom: 1em;">
@@ -39,7 +34,6 @@
                                         <td align="center"> <strong>--------------</strong></td>
                                          <td> </td>
                                         <td align="center"> <strong>--------------</strong></td>
-
                                     </tr>
                                     <tr>
                                         <td align="center"><strong>Prepared By</strong></td>
@@ -66,7 +60,7 @@
 
         <template id="report_batch_payslip_layout">
             <t t-call="report.html_container">
-                <t t-call="report.external_layout">
+                <t t-call="report.internal_layout">
                     <t t-foreach="docs" t-as="o">
                         <div class="page">
 
